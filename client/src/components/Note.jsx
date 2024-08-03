@@ -8,7 +8,7 @@ const Note = ({ note }) => {
 
   const handleDeleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/notes/${id}`);
+      await axios.delete(`https://notaty-app.onrender.com/notes/${id}`);
     } catch (error) {
       console.error("Error deleting note:", error);
     }
@@ -16,7 +16,7 @@ const Note = ({ note }) => {
 
   const handleUpdateNote = async (id) => {
     try {
-      await axios.put(`http://localhost:3000/notes`, selectedNote);
+      await axios.put(`https://notaty-app.onrender.com/notes`, selectedNote);
       setSelectedNote(null);
     } catch (error) {
       console.error("Error updating note:", error);

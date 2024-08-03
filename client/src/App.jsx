@@ -15,7 +15,7 @@ const App = () => {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/notes");
+      const response = await axios.get("https://notaty-app.onrender.com/notes");
       setNotes(response.data);
     } catch (error) {
       console.error("Error fetching notes:", error);
@@ -24,7 +24,7 @@ const App = () => {
 
   const handleAddNote = async () => {
     try {
-      await axios.post("http://localhost:3000/notes", newNote);
+      await axios.post("https://notaty-app.onrender.com/notes", newNote);
       fetchNotes();
       setNewNote({ title: "", contents: "" });
     } catch (error) {

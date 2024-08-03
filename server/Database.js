@@ -5,7 +5,7 @@ class Database {
   constructor() {
     // this.Url = "mongodb://127.0.0.1:27017/notaty";
     this.Url =
-      process.env.MONGODB_URL ||
+      process.env.MONGODB_URI ||
       "mongodb+srv://trrbader123:UtfcrXcrXWivPdDk@cluster0.0xobem8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
   }
 
